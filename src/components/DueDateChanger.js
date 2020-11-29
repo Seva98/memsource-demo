@@ -6,7 +6,7 @@ import { useActionSheet } from '@expo/react-native-action-sheet';
 const DueDateChanger = ({ onChange }) => {
   const dueDates = ['4 Hours', '8 Hours', '24 Hours', '72 Hours', 'No Due Date'];
   const dueDatesValues = [4, 8, 24, 72, 0];
-  const [selectedDueDate, setSelectedDueDate] = React.useState(0);
+  const [selectedDueDate, setSelectedDueDate] = React.useState(4);
   const { showActionSheetWithOptions } = useActionSheet();
   const showActionSheet = () => {
     showActionSheetWithOptions({ options: [...dueDates, 'Cancel'] }, (value) => {
